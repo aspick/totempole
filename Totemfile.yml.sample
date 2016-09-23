@@ -1,0 +1,6 @@
+meta: totempole-1.0
+daemons:
+    - name: 'webapp queue worker'
+      sh: 'php artisan queue:listen'
+      pwd: '/Users/admin/webapp'
+      workers: 3
