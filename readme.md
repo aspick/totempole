@@ -1,6 +1,6 @@
 # Totempole
 
-windows daemonize helper tool
+daemonize helper tool
 
 ## how to use
 
@@ -34,6 +34,6 @@ daemons:
 ```
 
 - `name` is required
-- either `ps` or `cmd ` is required
+- either `ps`, `cmd ` or `sh` is required
 - `pwd` is option
 - `workers` is num of request to launch daemons

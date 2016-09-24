@@ -78,7 +78,7 @@ func (p *program) run(totemfile Totemfile) {
                 case <- cmdCtx.Done():
                     break
                 default:
-                    //nop
+                    logger.Info(v.Name + " is restarting...")
                 }
             }
         }()

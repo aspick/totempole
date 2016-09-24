@@ -9,11 +9,11 @@ import (
 )
 
 type Pole struct {
-    Name string
-    Ps  string
-    Cmd string
-    Sh string
-    Pwd string
+    Name    string
+    Ps      string
+    Cmd     string
+    Sh      string
+    Pwd     string
     Workers int
 }
 
@@ -23,6 +23,7 @@ type Totemfile struct {
 }
 
 func readTotemfile() (Totemfile, error) {
+    // get default Totemfile path
     _, filename, _, _ := runtime.Caller(1)
     path := path.Join(path.Dir(path.Dir(filename)), "Totemfile.yml")
 
@@ -32,7 +33,6 @@ func readTotemfile() (Totemfile, error) {
     if e != nil {
         return totemfile, e
     }
-
 
     e = yaml.Unmarshal(buf, &totemfile)
     if e != nil {
